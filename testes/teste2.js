@@ -1,5 +1,7 @@
-const removeDuplicates = s => s.replace(/[^\w\s]|(.)(?=\1)/gi, "").split('')
+function removeDuplicates(arrStr){
+    let str = arrStr.toString()
+    let newStr = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+    console.log(newStr.replace(/[^\w\s]|(.)(?=\1)/gi, "").split(''))
+}
 
-
-console.log(removeDuplicates("ggycccqcyy"))
-    
+removeDuplicates(["g", "g", "y", "c", "c", "c", "q", "c", "y", "y"])
